@@ -3,5 +3,5 @@ project('wallpaper_project', 'cpp',
   default_options : ['warning_level=3', 'cpp_std=c++14'])
 
 executable('wallpaper_project',
-           'main.cpp',
+           'src/main.cpp',
            install : true)
