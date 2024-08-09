@@ -1,5 +1,12 @@
-#include "stdio.h"
+#include "database.h"
 
 int main() {
-  printf("ola mundo");
+  wal::DatabaseManager manager;
+  bool result = manager.open();
+
+  if (result) {
+    std::string sql = "insert into test(name, age) values ('Ericao', 23);";
+
+    manager.insert(sql);
+  }
 }

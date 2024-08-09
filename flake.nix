@@ -19,7 +19,11 @@
           }
           {
             packages = with pkgs; [
+              # Database integration
+              sqlite
+
               clang-tools
+              pkg-config
               clang
               cmake
               meson
@@ -33,6 +37,7 @@
               vcpkg
               vcpkg-tool
               python3
+
             ] ++ (if system == "aarch64-darwin" then [ ] else [ gdb ]);
           };
       });

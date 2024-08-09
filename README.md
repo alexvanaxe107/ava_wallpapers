@@ -18,9 +18,16 @@ The main languages will be C++ and bash script.
 
 A ideia é criar uma ferramenta cli, na qual possamos iteragir com esta base. Os comandos seriam.
 
-> ava_wp -a arquivo.img identificador_unico (add/inclui inclui essa imagem na base dados com o identificador unico dela)<br>
-ava_wm -t "tag1,tag2,tag3" imagem (identificador ou caminho)<br>
-ava_wm -q -t "tag1" (retorna o caminho das imagens com tag1)<br>
-ava_wm -q -d "1920x1080" (retorna o caminho das imagens com dimensoes 1920x1080)<br>
-ava_wm -q -d "1920x1080" -t "tag1,tag3" (retorna o caminho das imagens com dimensoes 1920x1080 que tenham a tag1 e a tag3)<br>
-ava_wm -q -d "1920x1080" -t "tag1,~tag3" (retorna o caminho das imagens com dimensoes 1920x1080 que tenham a tag1 e NAO tenham a tag3)<br>
+> ava_wp -a arquivo.img identificador_unico (add/inclui inclui essa imagem na base dados com o identificador unico dela)
+>ava_wm -t "tag1,tag2,tag3" imagem (identificador ou caminho)
+>ava_wm -q -t "tag1" (retorna o caminho das imagens com tag1)
+>ava_wm -q -d "1920x1080" (retorna o caminho das imagens com dimensoes 1920x1080)
+>ava_wm -q -d "1920x1080" -t "tag1,tag3" (retorna o caminho das imagens com dimensoes 1920x1080 que tenham a tag1 e a tag3)
+>ava_wm -q -d "1920x1080" -t "tag1,~tag3" (retorna o caminho das imagens com dimensoes 1920x1080 que tenham a tag1 e NAO tenham a tag3)
+
+# Estrutura
+* flake.* - This files are for development and install in a nix system.
+* wallpaper_project - The project itself
+* src - The code
+* include - The headers
+* tools - Scripts used to facilitate de development
